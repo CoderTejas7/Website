@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"Pr >
+<title>Responsive Website Landing Page - With Background Video Slider Travel</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+<a href="#" class="brand">Farming</a>
+<div class="menu-btn"></div>
+<div class="navigation">
+<div class="navigation-items">
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Explore</a>
+<a href="#">Gallery</a>
+<a href="#">Contact</a>
+</div>
+</div>
+</header>
+
+<section class="home">
+    <video class="video-slide active" src="190416_01_LlandudnoBeach_Drone_001.mp4" autoplay muted loop></video>
+    <video class="video-slide " active  src="2.mov" autoplay muted loop></video>
+    <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="5.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="6.mp4" autoplay muted loop></video>
+    
+
+
+
+    <div class="content">
+    <h1>Chaitanya<br><span>Nerkar</span></h1>
+    <p>India is one of the major players in the agriculture sector worldwide and it is the primary source of livelihood for ~55% of India’s population. India has the world's largest cattle herd (buffaloes), largest area planted to wheat, rice, and cotton, and is the largest producer of milk, pulses, and spices in the world. It is the second-largest producer of fruit, vegetables, tea, farmed fish, cotton, sugarcane, wheat, rice, cotton, and sugar. Agriculture sector in India holds the record for second-largest agricultural land in the world generating employment for about half of the country’s population. Thus, farmers become an integral part of the sector to provide us with means of sustenance.</p>
+    <a href="#">Read More</a>
+    </div>
+    <div class="media-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <div class ="slider-navigation">
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        
+    </div>
+
+    </section>
+
+<script type="text/javascript">
+    //Javacript of responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () =>{
+        menuBtn.classlist.toggle("active");
+        navigation.classlist.toggle("active");
+    });
+    // Javacript for video slider navigation
+        const btns = document.querySelectorAll (".nav-btn");
+        const slides = document.querySelectorAll (".video-slide");
+
+
+        var sliderNav = function (manual){
+
+            btns.forEach((btn)=>{
+                btn.classList.remove("active");
+            });
+
+            slides.forEach((slide)=>{
+            slide.classList.remove("active");
+            });
+
+
+        btns [manual].classList.add("active");
+        slides[manual].classList.add("active");
+
+        }
+
+        btns.forEach((btn, i) => {
+          btn.addEventListener("click",()=> {
+        sliderNav (i);
+        });
+    });
+        </script>
+
+        
+
+</body>
+</html>
